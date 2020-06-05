@@ -11,7 +11,7 @@ videoWidth = size(videoAsFrames,2);
 videoHeight = size(videoAsFrames,1);
 frameRate = vidReader.FrameRate;
 %Making sure the path to write out is correct
-vidWriter = VideoWriter(strcat(strrep(inputFileName,'.','_'),'ResultEulerian_','alpha_', num2str(alpha), '_freqlow_', num2str(lowerBoundFrequency), '_freqhigh_', num2str(upperBoundFrequency), '.avi'), 'FrameRate', frameRate);
+vidWriter = VideoWriter(strcat(strrep(inputFileName,'.','_'),'ResultEulerian_','alpha_', num2str(alpha), '_freqlow_', num2str(lowerBoundFrequency), '_freqhigh_', num2str(upperBoundFrequency), '.avi'));
 
 %Because we need the height indices for the gaussian pyramid, we use the
 %first frame as reference frame to get the information from it.
